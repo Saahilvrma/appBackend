@@ -6,10 +6,8 @@ const app = express()
 const port = 3000
 
 
-
-
 // Connect to MongoDB database
-mongoose.connect('mongodb://localhost:27017/backendApp', {
+mongoose.connect('mongodb+srv://artindex:test%40123@artindex.rxas5ro.mongodb.net/test', {
   useNewUrlParser: true,
   useUnifiedTopology: true,
 })
