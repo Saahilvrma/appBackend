@@ -1,9 +1,11 @@
 
-const ArtWork = require('../models/ArtWork');
+const Contact = require('../models/Contact');
+const mongoose = require('mongoose');
 
-async function addArtWork (req, res)  {
+async function addContacts (req, res)  {
     try {
-        const newData = new ArtWork(req.body);
+
+        const newData = new Contact(req.body);
         let dataRes =   await newData.save();
         console.log(dataRes)
         res.status(200).json({ message: 'Data added to database.',data: dataRes});
@@ -14,12 +16,11 @@ async function addArtWork (req, res)  {
 };
 
 
-
-  async function getArtWork (req,response)  {
+async function getContacts (req,response)  {
   
     try{
-        var ArtWork = require('../models/ArtWork');
-        ArtWork.find().then((data) => {
+        var Contact = require('../models/Contact');
+        Contact.find().then((data) => {
             console.log(data);
             let dataResult = data;
            
@@ -37,5 +38,5 @@ async function addArtWork (req, res)  {
 
 
 module.exports = {
-    addArtWork,getArtWork,
+    addContacts,getContacts,
   };
