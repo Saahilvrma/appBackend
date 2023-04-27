@@ -1,4 +1,6 @@
+
 const mongoose = require('mongoose');
+
 const myModelSchema = new mongoose.Schema({
     Title: {
         type: String,
@@ -7,6 +9,9 @@ const myModelSchema = new mongoose.Schema({
     Description: {
         type: String,
 
+    },
+    Inventory:{
+        type: String, 
     },
     IncomeType: {
         type: String,
